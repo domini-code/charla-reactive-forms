@@ -11,6 +11,10 @@ export class FormGroupComponent implements OnInit {
   constructor() {}
 
   ngOnInit() {
-    this.myForm = new FormGroup({});
+    this.myForm = new FormGroup({
+      name: new FormControl(''),
+      email: new FormControl(''),
+      password: new FormControl('')
+    });
   }
 }
