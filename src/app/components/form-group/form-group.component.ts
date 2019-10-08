@@ -17,4 +17,8 @@ export class FormGroupComponent implements OnInit {
       password: new FormControl('')
     });
   }
+
+  onSave({ value, valid }) {
+    console.warn(value, valid);
+  }
 }

@@ -1,5 +1,5 @@
 <div class="container mt-2">
-  <form novalidate [formGroup]="myForm">
+  <form novalidate [formGroup]="myForm" (ngSubmit)="onSave(myForm)">
     <div class="form-group">
       <label for="txtName">Name</label>
       <input
