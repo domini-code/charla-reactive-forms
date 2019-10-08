@@ -15,13 +15,17 @@ export class FormGroupComponent implements OnInit {
 
   ngOnInit() {
     this.myForm = new FormGroup({
-      name: new FormControl('Bezael', Validators.required),
-      email: new FormControl('', Validators.email),
+      name: new FormControl('', [Validators.required, Validators.minLength(5)]),
+      email: new FormControl('me@gmail.com', Validators.email),
       password: new FormControl('', Validators.pattern(this.myRegex))
     });
   }
 
   onSave({ value, valid }) {
     console.warn(value, valid);
+  }
+
+  get name() {
+    return this.myForm.get('name');
   }
 }
