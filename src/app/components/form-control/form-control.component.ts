@@ -10,7 +10,8 @@ import { FormControl } from '@angular/forms';
   styleUrls: ['./form-control.component.css']
 })
 export class FormControlComponent implements OnInit {
-  user = new FormControl('HolaMundito');
+  user = new FormControl('');
+
   constructor() {}
 
   ngOnInit() {}
