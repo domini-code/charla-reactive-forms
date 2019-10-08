@@ -33,7 +33,9 @@
         formControlName="password"
       />
     </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="submit" class="btn btn-primary" [disabled]="!myForm.valid">
+      Submit
+    </button>
   </form>
 </div>
 {{ myForm.value | json }}
